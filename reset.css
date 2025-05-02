@@ -20,6 +20,7 @@
     line-height: 1.5;
     /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+    background-color: #FAF7F2;
   }
   
   /* 6. Improve media defaults */

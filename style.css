@@ -1,9 +1,9 @@
 .banner {
   background-image: url("public/assets/iteration-1/home-banner.png");
-  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 1920px;
+  height: 1080px;
   }
  
 .header-banner {
@@ -58,12 +58,21 @@ header p {
   margin: 2rem auto;;
 }
 
-.header-nav nav {
+.header-btn:hover {
+  background-color: #FDC913;
+  color: white;
+  cursor: pointer;
+  border-color: #FDC913;
+  border-style: solid;
+  transition: ease-out;
+}
+
+#header-nav nav {
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 1.5rem 0;
+  background-color: white;
 }
 
 .nav-item {
@@ -110,6 +119,7 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 1.5rem;
 }
 
 .container1 h3 {
@@ -117,6 +127,7 @@ header p {
   font-size: 3.5rem;
   font-family: "Quattrocento";
   line-height: 4rem;
+
 }
 
 .container1 p {
@@ -153,6 +164,7 @@ header p {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .container2-top {
@@ -238,4 +250,182 @@ header p {
   border-color: white;
   border-style: solid;
   transition: ease-out;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-top: 2rem;
+}
+
+.main-title p {
+  font-family: "Satisfy";
+  color:#CE2829;
+  font-size: 2rem
+}
+
+.main-title h3 {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 3rem
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: #FAF7F2;;
+}
+
+.nav-bottom nav {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.nav-bottom a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: white;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  color: #292929;
+  font-family: "Barlow";
+  font-weight: 430;
+  font-size: 1.2rem;
+  margin: 0 -1rem;
+}
+
+.nav-bottom a.active {
+  background-color: #292929;
+  color: white;
+}
+
+.nav-bottom a:hover {
+  background-color: #292929;
+  color: white;
+  cursor: pointer;
+}
+
+.food-cards {
+  background-color: #FAF7F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card1,.card2, .card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  width: 18.5%;
+  border-radius: 1rem;
+}
+
+.bottompart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.bottompart h4 {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #292929;
+}
+
+.bottom-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #292929;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.bottom-text .left {
+  font-family: "Barlow";
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.bottom-text .mid {
+  font-family: "Barlow";
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 3rem;
+} 
+
+.bottom-text .right {
+  font-family: "Barlow";
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 59%;
+  margin: 0 auto;
+  border: solid 0.5rem red;
+  padding: 3rem 0;
+}
+
+footer{
+  background-color: #292929;
+  margin-top: 4rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Sola hizalama */
+  text-align: left; /* Metinleri sola hizalama */
+}
+
+footer h5 {
+  font-family: "Londrina solid";
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+.footer-left-item {
+  display: flex; /* Flexbox kullanımı */
+  align-items: center; /* Dikey hizalama */
+  gap: 0.5rem; /* Aradaki boşluk */
+  font-size: 1rem;
+  color: white;
+  margin-top: 1.5rem;
+  border: solid 0.5rem red;
+}
+
+.footer-left-item img {
+  width: 2rem; /* İkonun genişliği sabit */
+  height: auto; /* Oranını koruyarak yüksekliği ayarla */
+}
+
+.footer-left-item p {
+  margin: 0.5rem; /* Varsayılan boşlukları kaldır */
+  font-family: "Barlow";
+  font-size: 1rem;
 }
