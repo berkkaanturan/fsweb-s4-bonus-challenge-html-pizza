@@ -2,9 +2,9 @@
   background-image: url("public/assets/iteration-1/home-banner.png");
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1920px;
-  height: 1080px;
-  }
+  height: 100vh; /* Banner'ı ekranın tamamı kadar yapar */
+  width: 100%;
+}
  
 .header-banner {
   display:flex;
@@ -62,9 +62,6 @@ header p {
   background-color: #FDC913;
   color: white;
   cursor: pointer;
-  border-color: #FDC913;
-  border-style: solid;
-  transition: ease-out;
 }
 
 #header-nav nav {
@@ -90,7 +87,12 @@ header p {
   font-family: "Barlow";
   font-weight: 430;
   font-size: 1.2rem;
-  
+}
+
+.nav-item a:hover {
+  color: #CE2829;
+  cursor: pointer;
+  transition: 0.2s ease-out;
 }
 
 .nav-item img {
@@ -150,13 +152,12 @@ header p {
   font-weight: 600;
   }
 
-.container1 button:hover {
-  background-color: white;
-  color: #CE2829;
+.container1 button:hover,
+.container2-top button:hover,
+.container2-bottom button:hover
+ {
   cursor: pointer;
-  border-color: white;
-  border-style: solid;
-  transition: ease-out;
+  box-shadow: #FDC913 0px 0px 10px 5px;
 }
 
 .container2 {
@@ -201,14 +202,6 @@ header p {
   font-weight: 600;
 }
 
-.container2-top button:hover {
-  background-color: white;
-  color: #CE2829;
-  cursor: pointer;
-  border-color: white;
-  border-style: solid;
-  transition: ease-out;
-}
 .container2-bottom {
   background-image: url("public/assets/iteration-2/cta/kart-3.png");
   background-size: 100%;
@@ -241,15 +234,6 @@ header p {
   padding: 0.6rem 2rem;
   margin-top: 1.5rem;
   font-weight: 600;
-}
-
-.container2-bottom button:hover {
-  background-color: white;
-  color: #CE2829;
-  cursor: pointer;
-  border-color: white;
-  border-style: solid;
-  transition: ease-out;
 }
 
 .main-title {
@@ -334,6 +318,12 @@ header p {
   border-radius: 1rem;
 }
 
+.card1:hover, .card2:hover, .card3:hover {
+  cursor: pointer;
+  transform:scale(1.05);
+  transition: transform 0.3s ease;
+}
+
 .bottompart {
   display: flex;
   flex-direction: column;
@@ -385,13 +375,13 @@ header p {
   align-items: flex-start;
   width: 59%;
   margin: 0 auto;
-  border: solid 0.5rem red;
   padding: 3rem 0;
 }
 
 footer{
-  background-color: #292929;
+  background-color: rgba(26, 26, 26, 1);
   margin-top: 4rem;
+  border-bottom: solid 0.1rem #3d3c3c;
 }
 
 .footer-left {
@@ -399,6 +389,7 @@ footer{
   flex-direction: column;
   align-items: flex-start; /* Sola hizalama */
   text-align: left; /* Metinleri sola hizalama */
+  width: 33%;
 }
 
 footer h5 {
@@ -413,10 +404,9 @@ footer h5 {
   display: flex; /* Flexbox kullanımı */
   align-items: center; /* Dikey hizalama */
   gap: 0.5rem; /* Aradaki boşluk */
-  font-size: 1rem;
   color: white;
   margin-top: 1.5rem;
-  border: solid 0.5rem red;
+  
 }
 
 .footer-left-item img {
@@ -427,5 +417,243 @@ footer h5 {
 .footer-left-item p {
   margin: 0.5rem; /* Varsayılan boşlukları kaldır */
   font-family: "Barlow";
+  font-size: 1.1rem;
+}
+
+.footer-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* Sola hizala */
+  width: 33%;
+  margin-top: 6rem;
+  gap: 1.3rem;
+}
+
+.footer-mid h6{
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Barlow";
+  font-weight: 500;
+}
+
+.footer-mid ul {
+  list-style: none; /* Noktaları kaldır */
+  text-align: left; /* Metinleri sola hizala */
+  padding: 0; /* Varsayılan iç boşlukları kaldır */
+  line-height: 1rem; /* Satır yüksekliğini ayarla */
+}
+
+.footer-mid ul li {
+  margin: 1.5rem auto; /* Her bir öğe için üst ve alt boşluk */
+}
+
+.footer-mid a {
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  color: white; /* Yazı rengini beyaz yap */
+  font-family: "Barlow";
+  font-size: 1.1rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction:column;
+  align-items: left; /* Sola hizala */
+  width: 33%;
+  margin-top: 6rem;
+}
+
+.footer-right h6 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Barlow";
+  font-weight: 500;
+}
+
+.footer-right-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: left; /* Sola hizala */
+  gap: 1rem; /* Aradaki boşluk */
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.copyright {
+  background-color: rgba(26, 26, 26, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.copyright-items {
+  width: 59%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 
+}
+
+.copyright-items p {
+  color: white;
+  font-family: "Barlow";
   font-size: 1rem;
+  font-weight: 300;
+} 
+
+@media (max-width:500px) {
+  .header-p {
+    display:none;
+  }
+
+  .header-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-title {
+    line-height: 1.2;
+    text-align: center;
+}
+
+  .header-title-container h2 {
+    font-size: 3rem;
+    padding: 1rem 6rem;
+  }
+  .banner img {
+    width: 20rem;
+    margin-top: 4rem;
+  }
+
+  .header-btn {
+    padding: 0.6rem 3rem;
+    font-size: 1rem;
+  }
+
+  #header-nav nav {
+    display: flex;
+    flex-wrap: wrap; /* Elemanların birden fazla satıra geçmesini sağlar */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Elemanlar arasındaki boşluk */;
+  }
+
+  .containers {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+
+  .container1{
+    width: 80%;
+    height: auto;
+    background-position: center;
+  }
+
+  .container2 {
+    width: 100%;
+    margin: auto;
+  }
+
+  .container2-top {
+    background-color: #292929;
+    background-size: 70%;
+    background-position: 7rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  .container2-bottom {
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    margin: auto;
+  }
+
+  .main-title {
+    padding-top: 6rem;
+    gap: 2rem
+  }
+
+  .main-title h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    width: 60%;
+    height: auto;
+  }
+
+  .nav-bottom nav {
+    flex-wrap: wrap;
+    margin-top: 8rem;
+    gap: 2rem
+  } 
+
+ 
+  .food-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card1, .card2, .card3 {
+    width: 80%;
+    margin: auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    width: 100%;
+    margin-left: -1rem;
+  }
+
+  .footer-left h5 {
+    font-size: 2.5rem;
+    margin-left: -1rem;
+
+  }
+
+
+  .footer-left-item img {
+    width: 1.5rem;
+    margin-left: -1rem;
+    margin-top: -1.6rem;
+  }
+
+  .footer-left-item p {
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+
+  .footer-mid {
+    width: 100%;
+    margin-left: -2rem;
+    margin-top: 2rem;
+  }
+
+  .footer-mid h6 {
+    font-size: 1.4rem;
+  }
+
+  .footer-mid a {
+    font-size: 1rem;
+  }
+
+  .footer-right {
+    width: 100%;
+    margin-left: -2rem;
+    margin-top: 1rem;
+  }
+
+  .footer-right-images img {
+    width: 29%; /* Her resmin genişliğini %45 olarak ayarla */
+  }
+
+
+  .copyright-items {
+    width: 85%;
+  }
+
 }
