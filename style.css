@@ -2,7 +2,8 @@
   background-image: url("public/assets/iteration-1/home-banner.png");
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Banner'ı ekranın tamamı kadar yapar */
+  background-size: cover;
+  height: 100vh;
   width: 100%;
 }
  
@@ -12,15 +13,15 @@
   align-items:center;
   }
 
-header img {
-  width: 25rem;
-  margin: 3rem auto;
+.header-banner img {
+  width: 23rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 header p {
   font-family: "Satisfy" ;
-  color: #FDC913;
-  margin-bottom: -0.5rem;
+  color: #FDC913; 
   font-size: 2rem
 }
 
@@ -36,7 +37,7 @@ header p {
   font-family: "Barlow";
   font-weight: 300;
   font-size: 5rem;
-  margin: -1rem auto;
+  line-height: 5rem;
   
  }
 
@@ -55,7 +56,7 @@ header p {
   background-color: #FDC913;
   font-family: "Barlow";
   font-weight: 600;
-  margin: 2rem auto;;
+  margin: 2rem auto;
 }
 
 .header-btn:hover {
@@ -70,15 +71,14 @@ header p {
   align-items: center;
   padding: 1.5rem 0;
   background-color: white;
+  gap: 4rem;
 }
 
 .nav-item {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 3rem;
   gap: 1rem;
-  margin: 0 2rem;
 }
 
 .nav-item a {
@@ -107,26 +107,27 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
   gap: 1rem;
 }
 
 .container1 {
     background-image: url("public/assets/iteration-2/cta/kart-1.png");
-    background-size: 100%;
+    background-size: cover;
     border-radius: 1rem;
-    padding: 2.5rem;
+    padding: 3rem;
     width: 35rem;
     height: 29rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 1.5rem;
+    gap: 1rem;
 }
 
 .container1 h3 {
   color: white;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-family: "Quattrocento";
   line-height: 4rem;
 
@@ -137,7 +138,6 @@ header p {
   font-size: 1.1rem;
   font-family: "Barlow";
   font-weight: 500;
-  margin-top: 1.2.rem;
   }
 
 .container1 button {
@@ -148,7 +148,7 @@ header p {
   font-family: "Barlow";
   color: #CE2829;
   padding: 0.6rem 2rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-weight: 600;
   }
 
@@ -254,7 +254,7 @@ header p {
 .main-title h3 {
   font-family: "Barlow";
   font-weight: 600;
-  font-size: 3rem
+  font-size: 2.8rem
 }
 
 .nav-bottom {
@@ -268,7 +268,8 @@ header p {
 .nav-bottom nav {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  gap: 4rem;
 }
 
 .nav-bottom a {
@@ -286,6 +287,7 @@ header p {
   font-weight: 430;
   font-size: 1.2rem;
   margin: 0 -1rem;
+
 }
 
 .nav-bottom a.active {
@@ -373,9 +375,9 @@ header p {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 59%;
+  width: 58%;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 0 2rem 0;
 }
 
 footer{
@@ -385,10 +387,6 @@ footer{
 }
 
 .footer-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Sola hizalama */
-  text-align: left; /* Metinleri sola hizalama */
   width: 33%;
 }
 
@@ -411,7 +409,6 @@ footer h5 {
 
 .footer-left-item img {
   width: 2rem; /* İkonun genişliği sabit */
-  height: auto; /* Oranını koruyarak yüksekliği ayarla */
 }
 
 .footer-left-item p {
@@ -457,7 +454,6 @@ footer h5 {
 .footer-right {
   display: flex;
   flex-direction:column;
-  align-items: left; /* Sola hizala */
   width: 33%;
   margin-top: 6rem;
 }
@@ -472,8 +468,6 @@ footer h5 {
 .footer-right-images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: left; /* Sola hizala */
   gap: 1rem; /* Aradaki boşluk */
   width: 100%;
   margin-top: 2.5rem;
@@ -501,8 +495,22 @@ footer h5 {
 } 
 
 @media (max-width:500px) {
+
+  .banner {
+    background-color: #CE2829;
+    background-size: 250vw;
+    background-position: bottom;
+  }
+  
+
   .header-p {
     display:none;
+    text-decoration: none;
+  }
+
+  .header-banner img {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   .header-title-container {
@@ -518,25 +526,43 @@ footer h5 {
 }
 
   .header-title-container h2 {
-    font-size: 3rem;
-    padding: 1rem 6rem;
+    font-size: 15vw;
+    padding: 1rem;
   }
   .banner img {
-    width: 20rem;
-    margin-top: 4rem;
+    width: 70%;
+    margin-top: 5rem;
   }
 
   .header-btn {
-    padding: 0.6rem 3rem;
-    font-size: 1rem;
+    padding: 2vw 9vw;
+    font-size: 4vw;
+    margin: 0 auto;
   }
 
+
   #header-nav nav {
+    display:flex;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 1.5rem auto;
+    background-color: white;
+    gap:0.5rem;
+    padding-left: 1rem;
+  }
+
+  .nav-item {
+    width: 40%;
+  }
+
+  #header-nav nav img {
     display: flex;
-    flex-wrap: wrap; /* Elemanların birden fazla satıra geçmesini sağlar */
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; /* Elemanlar arasındaki boşluk */;
+    width: 7vw;
+  }
+
+  #header-nav nav a {
+    font-size: 4vw;
+
   }
 
   .containers {
@@ -548,6 +574,16 @@ footer h5 {
     width: 80%;
     height: auto;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container1 p {
+    font-size: 1.1rem;
+  }
+
+  .container1 h3 {
+    font-size: 4rem;
   }
 
   .container2 {
@@ -578,15 +614,32 @@ footer h5 {
   .main-title h3 {
     font-size: 2.5rem;
     text-align: center;
-    width: 60%;
-    height: auto;
   }
 
   .nav-bottom nav {
     flex-wrap: wrap;
-    margin-top: 8rem;
-    gap: 2rem
+    margin-top: 6rem;
+    padding: 0 4rem 0 4rem;
+    gap: 2rem;
   } 
+
+
+  .nav-bottom img{
+    width: 2rem;
+  }
+
+  .nav-bottom a {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-bottom .nav-item:nth-child(2n) {
+    justify-content: center;
+  }
+
+  .nav-bottom .nav-item:nth-child(2n+1) {
+    justify-content: center;
+  }
 
  
   .food-cards {
