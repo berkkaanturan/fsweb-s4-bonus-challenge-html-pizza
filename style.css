@@ -38,6 +38,7 @@ header p {
   font-weight: 300;
   font-size: 5rem;
   line-height: 5rem;
+  text-align: center;
   
  }
 
@@ -166,6 +167,7 @@ header p {
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
+  padding: 3;
 }
 
 .container2-top {
@@ -572,19 +574,22 @@ footer h5 {
 
   .container1{
     width: 80%;
-    height: auto;
+    height: 70vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 3rem 2.5rem;
   }
 
   .container1 p {
-    font-size: 1.1rem;
+    font-size: 4vw;
   }
 
   .container1 h3 {
-    font-size: 4rem;
+    font-size: 12vw;
+    line-height: 2.5rem;
   }
+
 
   .container2 {
     width: 100%;
